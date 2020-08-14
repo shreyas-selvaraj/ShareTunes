@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ShareTunes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <audio controls id = "player-1">
+      <source id = "source-1" src = "" type = "audio/mpeg">
+    </audio>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fa fa-headphones"></i> ShareTunes</h1>
+        <a href="index.html" class="btn">Leave Room</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i> Room Name:</h3>
+          <h2 id="room-name"></h2>
+          <h3><i class="fas fa-users"></i> Users</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/315.jpg">
+          <img src="images/circles.png">
+          <img src="images/godzilla.png">
+        </div>
+        <div class="column">
+          <img src="images/imsotired.jpg">
+          <img src="images/tilicollapse.jpg">
+          <img src="images/hotshower.jpg">
+        </div>
+        <div class="column">
+          <img src="images/rapgod.png">
+          <img src="images/sunflower.jpg">
+          <img src="images/wow.png">
+        </div>
+        <div class="column">
+          <img class = "album" src="images/weloved.jpg">
+          <img src="images/humble.png">
+          <img src="images/everythingieverwanted.jpg">
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <div id='rg_embed_link_5180439' class='rg_embed_link lyrics' data-song-id='5180439'>Read <a href='https://genius.com/Eminem-godzilla-lyrics'>“Godzilla” by Eminem</a> on Genius</div><script crossorigin src='//genius.com/songs/5180439/embed.js'></script>
+  </body>
+</html>
+
+<!-- have the one audioplayer, everytime one of the albums is clicked change the source of the player -->
